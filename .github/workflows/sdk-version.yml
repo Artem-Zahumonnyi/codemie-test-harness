@@ -29,7 +29,7 @@ jobs:
     # Never on a fork: it has no secrets, so the job could only fail.
     # On issue_comment, run only for a "/rerun" comment on the bot's PR.
     if: >-
-      github.repository_owner == 'codemie-ai' && (github.event_name != 'issue_comment' || (github.event.issue.pull_request && startsWith(github.event.issue.title, 'chore(deps): bump codemie-sdk-python') && contains(github.event.comment.body, '/rerun') && contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association)))
+      github.repository_owner == 'Artem-Zahumonnyi' && (github.event_name != 'issue_comment' || (github.event.issue.pull_request && startsWith(github.event.issue.title, 'chore(deps): bump codemie-sdk-python') && contains(github.event.comment.body, '/rerun') && contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association)))
 
     steps:
       # author_association above is only a cheap pre-filter: MEMBER and
