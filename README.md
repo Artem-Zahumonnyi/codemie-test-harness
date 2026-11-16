@@ -40,7 +40,7 @@ Each setting is read from the first source that has it:
 2. Config file `~/.codemie/test-harness.json`, written by `codemie-test-harness config set KEY VALUE`.
 3. Built-in defaults for a local stack, used only when `CODEMIE_API_DOMAIN` is unset or local: API `http://localhost:8080`, UI `http://localhost:5173`, the default local admin user.
 
-`codemie-test-harness config list` shows all known settings.
+`codemie-test-harness config list` shows all known settings. `codemie-test-harness config get KEY` shows one value from the environment or, if unset there, from the config file (secrets are masked unless you add `--show-value`). `codemie-test-harness config unset --keys KEY1,KEY2` removes keys from the config file.
 
 | Setting | When | Value |
 |---|---|---|
